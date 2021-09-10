@@ -1,7 +1,6 @@
 package W04;
 
 import java.util.Scanner;
-import java.util.concurrent.LinkedTransferQueue;
 
 public class Übung3 {
 
@@ -10,6 +9,11 @@ public class Übung3 {
         System.out.println("Für welche Zahl möchtest du eine Multiplikationstafel haben? :");
         int num = sc.nextInt();
 
+
+        for (int i = 1; i < 11; i++){
+            int n = i * num;
+            System.out.println(i + "*" + num + "=" + n);
+        }
 
     }
 }
