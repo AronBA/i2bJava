@@ -1,6 +1,6 @@
 package W05;
 
-public class Übung4 {
+public class übung4 {
     public static void main(String[] args) {
         int[] arr = {2,3,5,7,11};
         int[] arrdup = arr;
