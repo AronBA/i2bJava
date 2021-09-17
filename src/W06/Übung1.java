@@ -15,8 +15,8 @@ public class Übung1 {
         }
     }
     static void notreverse(int a[]){
-        for (int i = 0; i < a.length; i++){
-            System.out.println(a[i]);
+        for (int j : a) {
+            System.out.println(j);
         }
     }
 
