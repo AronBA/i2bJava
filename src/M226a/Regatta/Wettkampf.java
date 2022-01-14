@@ -1,8 +1,9 @@
 package M226a.Regatta;
+import java.util.ArrayList;
 
 public class Wettkampf {
     private String name;
-    private Schiff[] Schiff = new Schiff[5];
+    private ArrayList<Schiff> schiffs = new ArrayList<Schiff>();
 
     Wettkampf(String name){
     this.name = name;
@@ -11,19 +12,16 @@ public class Wettkampf {
     public String getName() {
         return name;
     }
+
+
+
     public void addSchiff(Schiff schiff){
-        for (int i=0; i<Schiff.length; i++) {
-            if(Schiff[i] == null) {
-                Schiff[i] = schiff;
-                break;
-            }
-        }
+        schiffs.add(schiff);
     }
+
     public void Start(){
-        for(Schiff schiff : Schiff){
-            if(schiff != null){
+        for(Schiff schiff : schiffs){
                 schiff.race();
-            }
 
         }
 
@@ -32,8 +30,8 @@ public class Wettkampf {
 
         System.out.println(
                 "--------------------------------\n" + getName() + "\n" + "--------------------------------");
-        for(Schiff schiff : Schiff){
-            if(schiff != null){
+        for(Schiff schiff : schiffs){
+
                 int nr = schiff.getNr();
 
                 Besitzer besitzer  = schiff.getBesitzer();
@@ -41,8 +39,9 @@ public class Wettkampf {
                 String schiffname = schiff.getName();
                 int time = schiff.getTime();
                 System.out.println(nr +" | "+ schiffname + " | " + time +  " | " + besitzername + "\n");
-            }
+
         }
+
     }
 }
 
