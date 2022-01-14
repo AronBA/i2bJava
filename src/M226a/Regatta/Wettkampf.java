@@ -35,9 +35,12 @@ public class Wettkampf {
         for(Schiff schiff : Schiff){
             if(schiff != null){
                 int nr = schiff.getNr();
+
+                Besitzer besitzer  = schiff.getBesitzer();
+                String besitzername = besitzer.getName();
                 String schiffname = schiff.getName();
                 int time = schiff.getTime();
-                System.out.println(nr +" | "+ schiffname + " | " + time + "\n");
+                System.out.println(nr +" | "+ schiffname + " | " + time +  " | " + besitzername + "\n");
             }
         }
     }

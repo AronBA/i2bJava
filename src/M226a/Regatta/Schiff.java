@@ -6,12 +6,14 @@ public class Schiff {
     private String name;
     private int nr;
     private int time;
+    private Besitzer Besitzer;
 
     Random r = new Random();
 
-    Schiff(int nr, String name){
+    Schiff(int nr, String name, Besitzer Besitzer) {
     this.nr = nr;
     this.name = name;
+    this.Besitzer = Besitzer;
     }
 
     public int getNr() {
@@ -32,6 +34,14 @@ public class Schiff {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setBesitzer(M226a.Regatta.Besitzer besitzer) {
+        Besitzer = besitzer;
+    }
+
+    public M226a.Regatta.Besitzer getBesitzer() {
+        return Besitzer;
     }
 
     public void setNr(int nr) {
